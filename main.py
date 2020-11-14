@@ -3,8 +3,8 @@ Author: Rômulo do Carmo Sousa
 Description: Remove todos os arquivos terminados em '(1)'
 Date: 12-11-2020
 """
-import re
 import os
+import re
 import time
 
 
