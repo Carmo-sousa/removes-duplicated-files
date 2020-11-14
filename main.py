@@ -25,16 +25,14 @@ def remove():
     """Remove os arquivos"""
     repeated = repeated_files(os.listdir())
     length = len(repeated)
-    print(
-        f"\033[1;32mArquivos duplicados:\033[1;31m {length}\033[0;0m\033[0;0m\n")
+    print(f"\033[1;32mArquivos duplicados:\033[1;31m {length}\033[0;0m\033[0;0m\n")
 
     if not repeated:
         print("\033[1;96mNão existe trabalho aqui =) !!\033[0;0m")
         return
 
     for file in repeated:
-        print(
-            f"\033[1;32mRemovendo o arquivo:\033[0;0m \033[1;31m{file}\033[0;0m")
+        print(f"\033[1;32mRemovendo o arquivo:\033[0;0m \033[1;31m{file}\033[0;0m")
 
         time.sleep(0.1)
         os.remove(file)
