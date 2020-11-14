@@ -1,4 +1,3 @@
-#!/bin/python3
 """
 Author: Rômulo do Carmo Sousa
 Description: Remove todos os arquivos terminados em '(1)'
