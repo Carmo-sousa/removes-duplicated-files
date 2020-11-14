@@ -7,6 +7,12 @@ import os
 import re
 import time
 
+# Cores ASCII
+ciano_claro = "\033[1;96m"
+verde = "\033[1;32m"
+vermelho = "\033[1;31m"
+reset = "\033[0;0m"
+
 
 def repeated_files(files):
     """Retrona uma lista com os arquivos repetidos"""
@@ -25,19 +31,20 @@ def remove():
     """Remove os arquivos"""
     repeated = repeated_files(os.listdir())
     length = len(repeated)
-    print(f"\033[1;32mArquivos duplicados:\033[1;31m {length}\033[0;0m\033[0;0m\n")
+    print(f"{verde}Arquivos duplicados: {vermelho}{length}{reset}\n")
 
     if not repeated:
-        print("\033[1;96mNão existe trabalho aqui =) !!\033[0;0m")
+        print(f"{ciano_claro}✔ Não existe trabalho aqui ✨{reset}")
         return
 
     for file in repeated:
-        print(f"\033[1;32mRemovendo o arquivo:\033[0;0m \033[1;31m{file}\033[0;0m")
+        print(f"{vermelho}✖ {verde}Removendo o arquivo: {vermelho}{file}{reset}")
 
         time.sleep(0.1)
         os.remove(file)
+        print(f"{verde}✔ Arquivo removido!{reset}")
 
-    print("\n\033[1;96mTudo limpinho =) !!\033[0;0m")
+    print(f"{ciano_claro}✔ Tudo limpinho ✨{reset}")
 
 
 if __name__ == "__main__":
