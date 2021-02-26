@@ -24,7 +24,7 @@ Execute o comando no terminal
 
 ---
 
-- [ ] Refatorar
+- [x] Refatorar
 - [ ] Transformar em uma CLI
 - [ ] Criar um instalador
 - [ ] Permitir parâmetros de entrada
